@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Valentine’s Day Nabanita ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&family=Hind+Siliguri:wght@400;600&family=Dancing+Script:wght@600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff0f5, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1,
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #c9184a;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px
+    }
+
+    p {
+      max-width: 720px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* Fixed Heart Shape */
+    .heart {
+      width: 100px;
+      height: 100px;
+      background: #ff4d6d;
+      position: relative;
+      transform: rotate(-45deg);
+      margin: 50px auto;
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background: #ff4d6d;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 50px;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: rotate(-45deg) scale(1);
+      }
+
+      50% {
+        transform: rotate(-45deg) scale(1.1);
+      }
+
+      100% {
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+
+    /* Bengali Typography */
+    .bengali {
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 1.4rem;
+      color: #c9184a;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    /* Premium Navigation / Progress */
+    .progress-wrap {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      height: 70px;
+      width: 70px;
+      cursor: pointer;
+      display: block;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 2px rgba(255, 77, 109, 0.2);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: all 200ms linear;
+    }
+
+    .progress-wrap.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .progress-wrap::after {
+      position: absolute;
+      content: '❤️';
+      text-align: center;
+      line-height: 70px;
+      font-size: 24px;
+      left: 0;
+      top: 0;
+      height: 70px;
+      width: 70px;
+      cursor: pointer;
+      display: block;
+      z-index: 1;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      max-width: 800px;
+    }
+
+    .reasons {
+      text-align: left;
+      margin-top: 20px
+    }
+
+    .reasons li {
+      margin: 10px 0;
+      font-size: 1.05rem
+    }
+
+    .btn {
+      background: #ff4d6d;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3);
+    }
+
+    .final {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.4rem;
+      color: #c9184a;
+      font-family: 'Playfair Display', serif;
+    }
+
+    footer {
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #999;
+      text-align: center;
+    }
+
+    /* Floating Hearts */
+    .floating-hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart-float {
+      position: absolute;
+      bottom: -50px;
+      animation: floatUp linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0
+      }
+
+      10% {
+        opacity: 0.8
+      }
+
+      100% {
+        transform: translateY(-110vh) scale(1.4);
+        opacity: 0
+      }
+    }
+
+    .timer {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff4d6d;
+    }
+
+    /* Romantic Timeline Gallery */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, transparent, #ffb3c1, #ff758f, transparent);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .milestone {
+      position: relative;
+      width: 100%;
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .milestone-card {
+      position: relative;
+      width: 280px;
+      padding: 15px;
+      background: white;
+      border-radius: 25px;
+      box-shadow: 0 10px 40px rgba(255, 77, 109, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.5s;
+    }
+
+    .milestone-date {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #ff4d6d;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .milestone-img-container {
+      width: 180px;
+      height: 180px;
+      position: relative;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .milestone-img-container:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .milestone-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 5px solid white;
+    }
+
+    /* Cute Shapes */
+    .shape-heart-memory {
+      clip-path: path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
+      transform: scale(11);
+      /* Scale path to fit 220px */
+      transform-origin: top left;
+    }
+
+    /* Better Heart Shape via Border Radius */
+    .cute-heart {
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      overflow: hidden;
+      border: 4px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .cute-cloud {
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      overflow: hidden;
+    }
+
+    .cute-blob {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      overflow: hidden;
+    }
+
+    .milestone-text {
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background: #ff758f;
+      border: 4px solid white;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 10px rgba(255, 117, 143, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .milestone-card {
+        width: 90%;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-dot {
+        left: 20px;
+      }
+
+      .milestone {
+        align-items: flex-start;
+        padding-left: 50px;
+      }
+    }
+
+    /* Lightbox Styles (Keep) */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 30000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #lightbox.active {
+      display: flex;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 50%;
+      user-select: none;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .lightbox-prev {
+      left: 20px;
+    }
+
+    .lightbox-next {
+      right: 20px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .lightbox-caption {
+      color: white;
+      margin-top: 20px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+    }
+
+    /* Premium 3D Envelope */
+    #envelope-overlay {
+      position: fixed;
+      inset: 0;
+      background: #fff5f7;
+      z-index: 20000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1.5s ease-out;
+    }
+
+    #envelope-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .envelope-wrapper {
+      position: relative;
+      width: 320px;
+      height: 220px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .envelope-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #fdf2f4;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transform-style: preserve-3d;
+    }
+
+    /* Flap */
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+      border-top: 110px solid #f08080;
+      transform-origin: top;
+      transition: transform 0.6s ease-in-out;
+      z-index: 4;
+    }
+
+    .envelope-wrapper.open .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    /* Envelope Front Parts */
+    .envelope-front {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+
+    .envelope-front::before {
+      /* Left side */
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-left: 160px solid #fec5bb;
+      border-top: 110px solid transparent;
+    }
+
+    .envelope-front::after {
+      /* Right side */
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-right: 160px solid #fec5bb;
+      border-top: 110px solid transparent;
+    }
+
+    .envelope-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+      border-bottom: 110px solid #f99a9a;
+      z-index: 3;
+    }
+
+    /* The Letter Inside */
+    .letter {
+      position: absolute;
+      top: 10px;
+      left: 10%;
+      width: 80%;
+      height: 90%;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-top: 5px solid #ff758f;
+      z-index: 2;
+      transition: transform 0.8s ease-in-out;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .envelope-wrapper.open .letter {
+      transform: translateY(-50px);
+    }
+
+    .letter-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4rem;
+      color: #ff4d6d;
+    }
+
+    /* Instruction Text */
+    .envelope-instruction {
+      margin-top: 60px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #ff4d6d;
+      animation: floatText 3s ease-in-out infinite;
+      text-shadow: 0 5px 15px rgba(255, 77, 109, 0.2);
+    }
+
+    @keyframes floatText {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .seal-heart {
+      position: absolute;
+      top: 90px;
+      left: 140px;
+      font-size: 40px;
+      z-index: 5;
+      transition: transform 0.4s;
+    }
+
+    .envelope-wrapper.open .seal-heart {
+      transform: scale(0);
+    }
+
+    /* Cursor Trail Style */
+    .trail {
+      position: fixed;
+      pointer-events: none;
+      z-index: 15000;
+      font-size: 15px;
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.5);
+      }
+    }
+
+    /* Kiss Pop Up */
+    .kiss {
+      position: fixed;
+      font-size: 50px;
+      pointer-events: none;
+      z-index: 16000;
+      animation: popKiss 2s forwards;
+    }
+
+    @keyframes popKiss {
+      0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.5) rotate(20deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1.2) translateY(-100vh) rotate(-20deg);
+        opacity: 0;
+      }
+    }
+
+    /* Decision Card & Celebration */
+    .decision-container {
+      position: relative;
+      padding: 40px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-yes {
+      background: #ff4d6d;
+      font-size: 1.4rem;
+      padding: 18px 45px;
+      transform: scale(1.1);
+      z-index: 10;
+    }
+
+    .btn-no {
+      background: #ffb3c1;
+      color: #c9184a;
+      font-size: 1rem;
+      padding: 10px 25px;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .celebration-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 40000;
+      display: none;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      animation: heartGrow 1s ease-out forwards;
+    }
+
+    @keyframes heartGrow {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .big-heart {
+      font-size: 8rem;
+      color: #ff4d6d;
+      text-shadow: 0 0 30px rgba(255, 77, 109, 0.4);
+      margin-bottom: 20px;
+      animation: heartbeat 0.8s infinite;
+    }
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Digital Envelope Overlay -->
+  <div id="envelope-overlay">
+    <div class="envelope-wrapper" onclick="openEnvelope(this)">
+      <div class="envelope-box">
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-bottom"></div>
+        <div class="letter">
+          <div class="letter-text">Love, Nabanita... ❤️</div>
+        </div>
+        <div class="seal-heart">💖</div>
+      </div>
+    </div>
+    <div class="envelope-instruction">A secret letter for you, Nabanita... Click to open</div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/11/13/audio_b2384b1a41.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="progress-wrap" id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <section>
+    <h1>Hey, Nabanita ❤️</h1>
+    <p id="typingText"></p>
+    <div class="heart"></div>
+    <div class="bengali">"যতই দূরে থাকি না কেন, আমার মন সবসময় তোমার কাছেই থাকে।"</div>
+    <div class="timer" id="loveTimer"></div>
+    <p>Scroll slowly for our memories 💌</p>
+  </section>
+
+  <!-- Photo Timeline Gallery -->
+  <section>
+    <h2>Our Story Timeline</h2>
+    <div class="timeline">
+      <!-- Milestone 1 -->
+      <div class="milestone">
+        <div class="timeline-dot"></div>
+        <div class="milestone-card">
+          <div class="milestone-date">19 Oct 2018 ❤️</div>
+          <div class="milestone-img-container cute-heart" onclick="openLightbox(0)">
+            <div class="img-loader">
+              <div class="heart-spinner"></div>
+            </div>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
+          </div>
+          <div class="milestone-text">The magical day it all started...</div>
+        </div>
+      </div>
+
+      <!-- Milestone 2 -->
+      <div class="milestone">
+        <div class="timeline-dot"></div>
+        <div class="milestone-card">
+          <div class="milestone-date">Our First Anniversary</div>
+          <div class="milestone-img-container cute-cloud" onclick="openLightbox(1)">
+            <div class="img-loader">
+              <div class="heart-spinner"></div>
+            </div>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
+          </div>
+          <div class="milestone-text">Celebrating 365 days of us!</div>
+        </div>
+      </div>
+
+      <!-- Milestone 3 -->
+      <div class="milestone">
+        <div class="timeline-dot"></div>
+        <div class="milestone-card">
+          <div class="milestone-date">A Special Trip</div>
+          <div class="milestone-img-container cute-blob" onclick="openLightbox(2)">
+            <div class="img-loader">
+              <div class="heart-spinner"></div>
+            </div>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
+          </div>
+          <div class="milestone-text">Lost in our own little world...</div>
+        </div>
+      </div>
+
+      <!-- Milestone 4 -->
+      <div class="milestone">
+        <div class="timeline-dot"></div>
+        <div class="milestone-card">
+          <div class="milestone-date">Movie Night</div>
+          <div class="milestone-img-container cute-heart" onclick="openLightbox(3)">
+            <div class="img-loader">
+              <div class="heart-spinner"></div>
+            </div>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
+          </div>
+          <div class="milestone-text">Simple moments, best memories.</div>
+        </div>
+      </div>
+
+      <!-- Milestone 5 -->
+      <div class="milestone">
+        <div class="timeline-dot"></div>
+        <div class="milestone-card">
+          <div class="milestone-date">Today & Always</div>
+          <div class="milestone-img-container cute-cloud" onclick="openLightbox(4)">
+            <div class="img-loader">
+              <div class="heart-spinner"></div>
+            </div>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
+          </div>
+          <div class="milestone-text">My promise to you, Nabanita.</div>
+        </div>
+      </div>
+
+      <!-- Add more milestones here -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</div>
+    <div class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</div>
+    <img id="lightbox-img" src="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <section>
+    <div class="card">
+      <h2>For You</h2>
+      <p>
+        From the moment you came into my life, everything felt warmer, brighter,
+        and more meaningful. You are my calm, my happiness, and my favorite thought every day.
+      </p>
+      <p>My heart chooses you — today, tomorrow, always.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>A Secret for You</h2>
+      <p>Scratch the card below with your finger 👆</p>
+      <div class="scratch-container">
+        <div class="scratch-content">
+          <div class="bengali" style="font-size: 1.1rem;">"আমার সবটুকু ভালোবাসা তোমার জন্য"</div>
+        </div>
+        <canvas id="scratch-canvas" width="300" height="150"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Why I Love You</h2>
+      <div class="bengali" style="text-align: center; font-size: 1.1rem; opacity: 0.8; margin-bottom: 30px;">
+        "তুমি আমার জীবনের সেই আলো যা প্রতিটি অন্ধকার মুহূর্তকে উজ্জ্বল করে তোলে।"
+      </div>
+      <ul class="reasons">
+        <li>💖 Your smile that fixes everything</li>
+        <li>💖 How safe I feel with you</li>
+        <li>💖 Your kindness and beautiful heart</li>
+        <li>💖 The way you understand me</li>
+        <li>💖 Just being you</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>A Small Promise</h2>
+      <p>
+        I promise to stand by you on every good day and bad day,
+        to support your dreams, and to remind you every day how deeply loved you are.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card decision-container">
+      <div id="proposal-ui">
+        <h1>So… 💕</h1>
+        <div class="bengali" style="margin-bottom: 30px;">"তোমার হাত ধরে সারাজীবন চলতে চাই।"</div>
+        <div id="question-text"
+          style="font-size: 1.8rem; font-family: 'Dancing Script', cursive; color: #ff4d6d; margin-bottom: 30px;">
+          Will You Be My Valentine?
+        </div>
+        <div style="display: flex; gap: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-yes" onclick="celebrateYes()">Yes! ❤️</button>
+          <button class="btn btn-no" id="btnNo" onmouseover="moveNoButton()" onclick="moveNoButton()">No 🥺</button>
+        </div>
+      </div>
+
+      <div class="success-message" id="success-ui">
+        <div class="big-heart">💖</div>
+        <h1 style="font-size: 2.5rem;">I Knew You'd Say Yes!</h1>
+        <div class="bengali" style="font-size: 1.8rem; margin: 20px 0;">Happy Valentine's Day, Nabanita!</div>
+        <p style="font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: #ff4d6d;">
+          You make my world beautiful every day. ❤️
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" style="background: #ff758f; margin-top: 30px;" onclick="sendKiss()">Send a Kiss 💋</button>
+
+    <p style="margin-top:40px;font-size:0.9rem;color:#aaa;">
+      Tap anywhere 3 times for a secret 🤫
+    </p>
+  </section>
+
+  <footer>
+    Made with all my heart 💘
+  </footer>
+
+  <script>
+    /* 0. ENVELOPE OPENING */
+    function openEnvelope(element) {
+      if (element.classList.contains('open')) return;
+      element.classList.add('open');
+
+      const overlay = document.getElementById("envelope-overlay");
+      if (bgMusic.paused) bgMusic.play();
+
+      // Delay the fadeout so she sees the flap open and letter lift
+      setTimeout(() => {
+        overlay.classList.add("hidden");
+        setTimeout(() => overlay.style.display = 'none', 1500);
+      }, 1500);
+    }
+
+    /* 1. MUSIC & INTERACTION */
+    const bgMusic = document.getElementById("bgMusic");
+    document.addEventListener("click", function () {
+      if (bgMusic.paused) bgMusic.play();
+    }, { once: true });
+
+    /* 2. TYPING EFFECT */
+    const typingText = "Hi Nabanita... this is just a small corner of the internet… but it holds all my feelings for you.";
+    let index = 0;
+    function typeEffect() {
+      if (index < typingText.length) {
+        document.getElementById("typingText").innerHTML += typingText.charAt(index);
+        index++;
+        setTimeout(typeEffect, 60);
+      }
+    }
+
+    /* 3. JOURNEY COUNTER */
+    const proposalDate = new Date("2018-10-19T00:00:00");
+    function updateCounter() {
+      const now = new Date();
+      const diff = now - proposalDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById("loveTimer").innerText = `Together for ${days.toLocaleString()} days ❤️`;
+    }
+
+    /* 4. SCROLL ANIMATION */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    /* 5. FLOATING ELEMENTS */
+    const heartsContainer = document.getElementById("floatingHearts");
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart-float");
+      heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      heart.style.fontSize = (16 + Math.random() * 24) + "px";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+
+    /* 6. INITIALIZATION */
+    window.onload = () => {
+      typeEffect();
+      updateCounter();
+      setInterval(updateCounter, 1000 * 60 * 60); // Update every hour
+      setInterval(createHeart, 500);
+      document.querySelectorAll("section").forEach(sec => observer.observe(sec));
+    };
+
+    /* 7. FINAL REVEAL & CELEBRATION */
+    function moveNoButton() {
+      const btn = document.getElementById('btnNo');
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth - 100);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight - 100);
+
+      btn.style.position = 'fixed';
+      btn.style.left = x + 'px';
+      btn.style.top = y + 'px';
+      btn.style.zIndex = '100000';
+    }
+
+    function celebrateYes() {
+      document.getElementById('proposal-ui').style.display = 'none';
+      document.getElementById('success-ui').style.display = 'block';
+
+      // Explosion effect
+      for (let i = 0; i < 100; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.className = 'trail';
+          heart.innerHTML = ['❤️', '💖', '✨', '🌸', '💋'][Math.floor(Math.random() * 5)];
+          heart.style.left = '50vw';
+          heart.style.top = '50vh';
+          heart.style.fontSize = (20 + Math.random() * 30) + 'px';
+          document.body.appendChild(heart);
+
+          const angle = Math.random() * Math.PI * 2;
+          const velocity = 5 + Math.random() * 10;
+          const tx = Math.cos(angle) * velocity * 50;
+          const ty = Math.sin(angle) * velocity * 50;
+
+          heart.animate([
+            { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+            { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+          ], {
+            duration: 1000 + Math.random() * 1000,
+            easing: 'cubic-bezier(0, .9, .57, 1)',
+            fill: 'forwards'
+          });
+
+          setTimeout(() => heart.remove(), 2000);
+        }, i * 20);
+      }
+
+      if (bgMusic.paused) bgMusic.play();
+    }
+
+    /* 8. BACK TO TOP & SCROLL PROGRESS */
+    const scrollTop = document.getElementById("scrollTop");
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollTop.classList.add("active");
+      } else {
+        scrollTop.classList.remove("active");
+      }
+    });
+
+    /* 8.5 TAP TO BURST HEARTS */
+    document.addEventListener('click', (e) => {
+      // Don't burst if clicking a button or scratch canvas
+      if (e.target.tagName === 'BUTTON' || e.target.id === 'scratch-canvas') return;
+
+      for (let i = 0; i < 8; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'trail';
+        heart.innerHTML = '❤️';
+        heart.style.left = e.clientX + 'px';
+        heart.style.top = e.clientY + 'px';
+        heart.style.transform = `translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 0.5) * 100}px)`;
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 1000);
+      }
+    });
+
+    /* 9. TOUCH & CURSOR TRAIL */
+    function spawnTrail(x, y) {
+      const trail = document.createElement('div');
+      trail.className = 'trail';
+      trail.innerHTML = Math.random() > 0.5 ? '❤️' : '✨';
+      trail.style.left = x + 'px';
+      trail.style.top = y + 'px';
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1000);
+    }
+
+    document.addEventListener('mousemove', (e) => spawnTrail(e.clientX, e.clientY));
+    document.addEventListener('touchmove', (e) => {
+      spawnTrail(e.touches[0].clientX, e.touches[0].clientY);
+    });
+
+    /* 10. SCRATCH CARD LOGIC */
+    const canvas = document.getElementById('scratch-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let isDrawing = false;
+
+      function initScratch() {
+        ctx.fillStyle = '#ff758f';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Playfair Display';
+        ctx.textAlign = 'center';
+        ctx.fillText('Scratch Here ❤️', canvas.width / 2, canvas.height / 2 + 7);
+
+        ctx.globalCompositeOperation = 'destination-out';
+      }
+
+      function scratch(e) {
+        if (!isDrawing) return;
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches[0].clientX) - rect.left;
+        const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      canvas.addEventListener('mousedown', () => isDrawing = true);
+      canvas.addEventListener('touchstart', (e) => { isDrawing = true; e.preventDefault(); });
+      window.addEventListener('mouseup', () => isDrawing = false);
+      window.addEventListener('touchend', () => isDrawing = false);
+      canvas.addEventListener('mousemove', scratch);
+      canvas.addEventListener('touchmove', (e) => { scratch(e); e.preventDefault(); });
+
+      initScratch();
+    }
+
+    /* 10.5 LIGHTBOX LOGIC */
+    let currentImgIndex = 0;
+    const galleryItems = Array.from(document.querySelectorAll('.milestone-img-container img'));
+    const galleryImages = galleryItems.map(img => img.src);
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(index) {
+      currentImgIndex = index;
+      lightbox.classList.add('active');
+      updateLightbox();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+    }
+
+    function changeImage(dir) {
+      currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+      updateLightbox();
+    }
+
+    function updateLightbox() {
+      lightboxImg.src = galleryImages[currentImgIndex];
+      lightboxCaption.innerText = `Memory ${currentImgIndex + 1}`;
+    }
+
+    // Close lightbox on click outside the image
+    if (lightbox) {
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+    }
+
+    /* 11. SEND KISS */
+    function sendKiss() {
+      for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+          const kiss = document.createElement('div');
+          kiss.className = 'kiss';
+          kiss.innerHTML = '💋';
+          kiss.style.left = Math.random() * 100 + 'vw';
+          kiss.style.top = '100vh';
+          document.body.appendChild(kiss);
+          setTimeout(() => kiss.remove(), 2000);
+        }, i * 100);
+      }
+    }
+
+    let tapCount = 0;
+    document.addEventListener("click", () => {
+      tapCount++;
+      if (tapCount === 3) {
+        alert("I would choose you in every lifetime, Nabanita ❤️");
+        tapCount = 0;
+      }
+      setTimeout(() => tapCount = 0, 2000); // Reset tap count after 2s
+    });
+  </script>
+
+</body>
+
+</html>
