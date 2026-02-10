@@ -284,36 +284,42 @@
 
     .milestone-card {
       position: relative;
-      width: 280px;
-      padding: 15px;
-      background: white;
-      border-radius: 25px;
-      box-shadow: 0 10px 40px rgba(255, 77, 109, 0.1);
+      width: 260px;
+      padding: 20px;
+      background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
+      border-radius: 30px;
+      box-shadow: 0 15px 45px rgba(255, 77, 109, 0.12);
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: 0.5s;
+      transition: all 0.5s ease;
+      border: 2px solid rgba(255, 77, 109, 0.1);
+    }
+
+    .milestone-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(255, 77, 109, 0.2);
     }
 
     .milestone-date {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.8rem;
-      color: #ff4d6d;
-      margin-bottom: 10px;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      display: none;
     }
 
     .milestone-img-container {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       position: relative;
       margin-bottom: 15px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.4s ease;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(255, 77, 109, 0.25);
     }
 
     .milestone-img-container:hover {
-      transform: scale(1.05) rotate(2deg);
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 15px 40px rgba(255, 77, 109, 0.35);
     }
 
     .milestone-img-container img {
@@ -321,6 +327,13 @@
       height: 100%;
       object-fit: cover;
       border: 5px solid white;
+      transition: all 0.4s ease;
+      filter: brightness(1.02) contrast(1.05);
+    }
+
+    .milestone-img-container:hover img {
+      transform: scale(1.1);
+      filter: brightness(1.08) contrast(1.08) saturate(1.1);
     }
 
     /* Cute Shapes */
@@ -335,25 +348,26 @@
     .cute-heart {
       border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
       overflow: hidden;
-      border: 4px solid white;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(255, 77, 109, 0.25);
     }
 
     .cute-cloud {
       border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
       overflow: hidden;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(255, 183, 193, 0.3);
     }
 
     .cute-blob {
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       overflow: hidden;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(255, 143, 163, 0.3);
     }
 
     .milestone-text {
-      font-family: 'Hind Siliguri', sans-serif;
-      font-size: 1.1rem;
-      color: #666;
-      line-height: 1.4;
+      display: none;
     }
 
     .timeline-dot {
@@ -814,7 +828,7 @@
               <div class="heart-spinner"></div>
             </div>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRYAJ9zwh7acQFMWHCbVAOIfX4u-_-qRuUtTxrKWs9PKjgrFFzDEBWQHERS-XwYYJSqgP5i6r0jSKKcHE2XeI22WujLRCMGWBda5S94L5RYlrSGY5phmMNQvqLFy5GaPwX7oXv9d1sOU9jdOAh2G-wdAiMmi-eKfFmz8_LaJzyng5L38YWysLwaOBbuYo/s320/WhatsApp%20Image%202026-02-10%20at%2010.20.43%20PM%20(3).jpeg"
               onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
           </div>
           <div class="milestone-text">The magical day it all started...</div>
@@ -831,7 +845,7 @@
               <div class="heart-spinner"></div>
             </div>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpJZzdsoCCxtjvjNFHTVMYj-iiqFP_XNRERmWZewhKy7eMYfwQSVcKY8YHEYnFhVqmpm5jQwSEH7MCOeT9gmZxqoxO-w8mWtGo7017oh-xKPvXe0b4MMenhHopjN09IZE4vHeRXT1NtmRecl-uv1AvR8HzQP7UNEHS8LuY4eQ89kh1IVfjnwH-D8RfIzM/s320/WhatsApp%20Image%202026-02-10%20at%2010.20.43%20PM.jpeg"
               onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
           </div>
           <div class="milestone-text">Celebrating 365 days of us!</div>
@@ -848,7 +862,7 @@
               <div class="heart-spinner"></div>
             </div>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpX59u9LaYdOAwzVEGEHYhP1nQ-lWeprPYsQbHY1pCcXb3FLc0ecRuG9YFS9YCj3NZkYO5_jufFBwJ_7YhEomMSLHn5Y3FGYgQTnvoO-kcxBakNjWCPRB4hH6aqHzyiIspezyuQdcJ0gm62e_DYbRygpSOrAPexAKAJQX5QaKJQ4OV6oneDLelyxzFOkw/s320/WhatsApp%20Image%202026-02-10%20at%2010.20.43%20PM%20(1).jpeg"
               onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
           </div>
           <div class="milestone-text">Lost in our own little world...</div>
@@ -865,7 +879,7 @@
               <div class="heart-spinner"></div>
             </div>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigshvl4ZZ3RxoCzO2ykRGWvpDpWiKsy8OFMnM00_VZ4y3vHqpS7CQt3176c2zZkHlizeljytsVnHqQby9Z4Ql0OBka9chE7IoQ9Wa-hWtmieXezPX0_XC-r2X1EgNdscocimWAitTAv7zmu3y5Es8GWpeZNep3fAEsl9V3KaQGBX4KmD1hTOromu8Etxg/s320/IMG_20220930_131557.jpg"
               onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
           </div>
           <div class="milestone-text">Simple moments, best memories.</div>
@@ -882,7 +896,7 @@
               <div class="heart-spinner"></div>
             </div>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyXWfK1Tu2nSWDxdIBetf31AmmcbVPAbdNnnWHYnv9EHlmB7HP4alk0UFtdB3ecCEbShcBm1a7qPtlMaeU6qcVeKMUDiyvxvdL5voKNYL3xOnEJ1JGtbODlNFw3aMXxF0Ht53bDg0iNGWF-y7EHRYXatEAt8By_rLA0Ju7XlPoi0i-4GFx9l-kZyK1qxw/s320/ChatGPT%20Image%20Feb%202,%202026,%2010_47_34%20AM.png"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOjxS7G5BZxG0_li1_8gfnilIovi83H-ZgJvYWESaV2I1mikQ3okYDwtRtqGhpt4TOLdpvRhsMNLxe9lzBHb5VET_LeEpPQyaoPbSdZ0vJcxrM8KGEnVd56LAnfZiFVgpvQhafQjt2r6B-UxqsojtHiAHC5cRNUm6HBJkomVMullXdjm_3PJLaxOyj5bQ/s320/WhatsApp%20Image%202026-02-10%20at%2010.20.43%20PM%20(2).jpeg"
               onload="this.previousElementSibling.style.opacity=0; setTimeout(()=>this.previousElementSibling.remove(), 500)">
           </div>
           <div class="milestone-text">My promise to you, Nabanita.</div>
